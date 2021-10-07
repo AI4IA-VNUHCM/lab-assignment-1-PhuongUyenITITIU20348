@@ -13,19 +13,27 @@ Ex:
 #include <stdlib.h>
 #include <math.h>
 
-int main(int argc, char *argv[]) {
-	//testing variable, applying it to your algorithm for auto-evaluating
-	argc--;
-	int testcase[argc],i;
-	for(i=0; i<argc;i++){
-		if(atoi(argv[i+1])==0){
-			argc = i;
-			break;
-		}
-		else
-			testcase[i] = atoi(argv[i+1]);
-	}
-	//Your codes here
+int main ()
+{
+	int num, min, max;
+	float avarage;
+	 printf("Enter number:");
+	 scanf("%d", &num);
+	 min=num;
+	 max=num;
 
-	return 0;
-}
+	 while (num != 0){
+		 if (max<num){
+			 max = num;
+		 }
+		 if (min>num){
+			 min=num;
+		 }
+		  printf("Enter number:");
+		scanf ("%d", &num);
+	 }
+	 printf("Min is %d\n", min);
+	 printf("Max is %d\n", max);
+
+	 return 0;
+}	 		 	 
